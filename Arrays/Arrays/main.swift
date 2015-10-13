@@ -44,11 +44,12 @@ let operation = {
 }
 
 // Test functions
+print("Testing all operation functions:")
 print(add([1,2,3,4]))
 print(multiply([1,2,3,4]))
 print(average([1,2,3,4]))
 print(count([1,2,3,4]))
-
+print("Testing generic operation function:")
 print(operation([1,2,3,4], add))
 print(operation([1,2,3,4], multiply))
 print(operation([1,2,3,4], average))

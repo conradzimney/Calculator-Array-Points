@@ -29,11 +29,12 @@ let operation = {
 }
 
 // Test functions
+print("Testing all operation functions:")
 print(addFunc(3,4))
 print(subtractFunc(3,5))
 print(multiplyFunc(3,5))
 print(divideFunc(10,5))
-
+print("Testing generic operation function:")
 print(operation(3,4,addFunc))
 print(operation(3,5,subtractFunc))
 print(operation(3,5,multiplyFunc))
