@@ -10,45 +10,49 @@ import Foundation
 
 let point1 = (1,2)
 let point2 = (3,4)
-let point3 = (2.5, 5.7)
-let point4 = (3.2, 4.5)
 
-let addPoints = {
-    (point1 : (x : Int ,y : Int), point2 : (x : Int,y : Int)) -> (Int, Int) in
-    // implement non-two-arity tuples handling here
-    
-    return (point1.x + point2.x, point1.y + point2.y)
+func addPoints(left:(Int,Int), right:(Int,Int)) -> (Int,Int) {
+    return (left.0 + right.0, left.1 + right.1)
 }
 
-let subtractPoints = {
-    (point1 : (x : Int ,y : Int), point2 : (x : Int,y : Int)) -> (Int, Int) in
-    // implement non-two-arity tuples handling here
-    
-    return (point1.x - point2.x, point1.y - point2.y)
+func subtractPoints(left:(Int,Int), right:(Int,Int)) -> (Int,Int) {
+    return (left.0 - right.0, left.1 - right.1)
 }
 
-// Test functions for points as tuples
-print(addPoints(point1,point2))
-print(subtractPoints(point1,point2))
+// Test runs for points as tuples functions
+print(addPoints(point1, right:point2))
+print(subtractPoints(point1, right:point2))
 
-let point5: [Int: Int] = [2: 3]
-let point6: [Int: Int] = [4: 7]
+var dPoint1 = ["x": 1, "y": 2]
+var dPoint2 = ["x": 3, "y": 4]
 
-let addDictPoints = {
-    (point1 : [Int: Int], point2 : [Int: Int]) -> [Int: Int] in
-    // implement non-two-arity dictionary handling here
-    
-    // return (point1.key + point2.key, point1[point1.key] - point2[point2.key])
-    return [2:3]
+func addDictPoints(left: Dictionary<String, Int>, right: Dictionary<String, Int>) -> Dictionary<String, Int> {
+    return ["x": left["x"]! + right["x"]!, "y": left["y"]! + right["y"]!]
 }
 
-let subractDictPoints = {
-    (point1 : [Int: Int], point2 : [Int: Int]) -> [Int: Int] in
-    // implement non-two-arity dictionary handling here
-    
-    // return (point1.key + point2.key, point1[point1.key] - point2[point2.key])
-    return [2:3]
+func subtractDictPoints(left: Dictionary<String, Int>, right: Dictionary<String, Int>) -> Dictionary<String, Int> {
+    return ["x": left["x"]! - right["x"]!, "y": left["y"]! - right["y"]!]
 }
+
+// Test runs for points as dictionaries functions
+print(addDictPoints(dPoint1, right:dPoint2))
+print(subtractDictPoints(dPoint1, right:dPoint2))
+
+var point3 = ["x": 1.5, "y": 2.5]
+var point4 = ["x": 3.5, "y": 4.5]
+
+func addDoubleDictPoints(left: Dictionary<String, Double>, right: Dictionary<String, Double>) -> Dictionary<String, Double> {
+    return ["x": left["x"]! + right["x"]!, "y": left["y"]! + right["y"]!]
+}
+
+func subtractDoubleDictPoints(left: Dictionary<String, Double>, right: Dictionary<String, Double>) -> Dictionary<String, Double> {
+    return ["x": left["x"]! - right["x"]!, "y": left["y"]! - right["y"]!]
+}
+// Test runs for points as doubles as dictionaries functions
+print(addDoubleDictPoints(point3, right:point4))
+print(subtractDoubleDictPoints(point3, right:point4))
+
+
 
 
 
