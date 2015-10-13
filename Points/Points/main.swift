@@ -10,18 +10,22 @@ import Foundation
 
 let point1 = (1,2)
 let point2 = (3,4)
+let testTuple1 = (1,2,3,4)
+let testTuple2 = (5,6,7,8)
 
 func addPoints(left:(Int,Int), right:(Int,Int)) -> (Int,Int) {
     return (left.0 + right.0, left.1 + right.1)
 }
 
-func subtractPoints(left:(Int,Int), right:(Int,Int)) -> (Int,Int) {
+func subtractPoints(left:(Int, Int), right:(Int, Int)) -> (Int,Int) {
     return (left.0 - right.0, left.1 - right.1)
 }
 
 // Test runs for points as tuples functions
 print(addPoints(point1, right:point2))
 print(subtractPoints(point1, right:point2))
+//print(addPoints(testTuple1, right:testTuple2))
+
 
 var dPoint1 = ["x": 1, "y": 2]
 var dPoint2 = ["x": 3, "y": 4]
