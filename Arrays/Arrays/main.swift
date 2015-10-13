@@ -43,10 +43,12 @@ let operation = {
     (intArr : [Int], mathOperation : ([Int]) -> Int) -> Int in return mathOperation(intArr)
 }
 
+// Test functions
 print(add([1,2,3,4]))
 print(multiply([1,2,3,4]))
 print(average([1,2,3,4]))
 print(count([1,2,3,4]))
+
 print(operation([1,2,3,4], add))
 print(operation([1,2,3,4], multiply))
 print(operation([1,2,3,4], average))

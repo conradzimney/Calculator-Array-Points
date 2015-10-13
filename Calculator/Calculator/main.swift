@@ -28,6 +28,7 @@ let operation = {
     (left: Int, right: Int, mathFunction: (Int, Int) -> Int) -> Int in return mathFunction(left, right)
 }
 
+// Test functions
 print(addFunc(3,4))
 print(subtractFunc(3,5))
 print(multiplyFunc(3,5))
